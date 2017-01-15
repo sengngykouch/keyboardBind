@@ -1,54 +1,112 @@
-﻿;===================== Coded by Sengngy Kouch. Summer2016 ===========================
+﻿;======================= By Sengngy Kouch. @ Spring 2017 ==========================
 
-
-;================= Press F1 for staging ================
-$F12::
-{
-	Send ^{l}{left}{left}+{right 4}^{c}{left 4}
-	var:=clipboard
-	if(var = "www.")
-	{
-		sendinput staging.{enter}
-	}
-	else if (var = "wcsu")
-	{
-		sendinput staging.www.{enter}
-	}
-
-}
-
-
-
-;============ Copy and Paste with ( esc + L or R click) ====================
-;esc & LButton:: send ^{c}
-;esc & RButton:: send ^{v}
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #MaxHotkeysPerInterval 20000  ;//allow amount of key press in 1 sec.
 
-;=============================   Arrow  =================================
-CapsLock & i::SendInput, % GetKeyState("Shift", "P") ? "{Shift Down}{Up}{Shift Up}" : "{Up}"
-CapsLock & j::SendInput, % GetKeyState("Shift", "P") ? "{Shift Down}{Left}{Shift Up}" : "{Left}"
-CapsLock & l::SendInput, % GetKeyState("Shift", "P") ? "{Shift Down}{Right}{Shift Up}" : "{Right}"
-CapsLock & k::SendInput, % GetKeyState("Shift", "P") ? "{Shift Down}{Down}{Shift Up}" : "{Down}"
 
-;CapsLock & i & Shift::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{Shift}{Up}"
-
-;==================== Page Up and Down ========================================
-CapsLock & u::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{PgUp}"
-CapsLock & o::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{PgDn}"
-
-;============================= Delete =========================================
-CapsLock & '::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{Delete}"
-CapsLock & BackSpace::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{Delete}"
-
-;================================== Home and End =============================
-CapsLock & h::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{Home}"
-CapsLock & n::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{End}"
+;====================== Copy and Paste with ( Alt + L or R click) ====================
+Alt & LButton:: send ^{c} return
+Alt & RButton:: send ^{v} return
 
 
-CapsLock & 1::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{Ctrl Down}{k}{Ctrl Up}{Ctrl Down}{c}{Ctrl Up}"
-CapsLock & 2::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{Ctrl Down}{k}{Ctrl Up}{Ctrl Down}{u}{Ctrl Up}" 
+SetCapsLockState, AlwaysOff
+;====================== CapsLock On/Off ======================
+CapsLock & Enter::
+  state := GetKeyState("Capslock", "T")
+  if state
+    SetCapsLockState, AlwaysOff
+  else
+    SetCapsLockState, AlwaysOn
+return
 
-CapsLock & 7::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{Alt Down}{r}{Alt Up}"
-CapsLock & 8::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{Ctrl Down}{F5}{Ctrl Up}" 
-CapsLock & =::SendInput, % GetKeyState("Shift", "P") ? "{CapsLock}" : "{Ctrl Down}{k}{Ctrl Up}{Ctrl Down}{d}{Ctrl Up}"
+;====================== Up Arrow ======================
+$*i::
+if GetKeyState("Capslock", "P")
+  send {blind}{up}
+else
+  send {blind}{i} 
+return
+
+;====================== Down Arrow ======================
+$*k::
+if GetKeyState("Capslock", "P")
+  send {blind}{down}
+else
+  send {blind}{k} 
+return
+
+;====================== Left Arrow ======================
+$*j::
+if GetKeyState("Capslock", "P")
+  send {blind}{left}
+else
+  send {blind}{j} 
+return
+
+;====================== Right Arrow ======================
+$*l::
+if GetKeyState("Capslock", "P")
+  send {blind}{right}
+else
+  send {blind}{l} 
+return
+
+;====================== Delete ======================
+$*'::
+if GetKeyState("Capslock", "P")
+  send {blind}{delete}
+else
+  send {blind}{'}
+return
+
+;====================== Backspace ======================
+$*Space::
+if GetKeyState("Capslock", "P")
+  send {blind}{Backspace}
+else
+  send {blind}{space}
+return
+
+;====================== Pageup ======================
+$*u::
+if GetKeyState("Capslock", "P")
+  send {blind}{PgUP}
+else
+  send {blind}{u}
+return
+
+;====================== PageDown ======================
+$*o::
+if GetKeyState("Capslock", "P")
+  send {blind}{PgDn}
+else
+  send {blind}{o}
+return
+
+;====================== Home ======================
+$*h::
+if GetKeyState("Capslock", "P")
+  send {blind}{Home}
+else
+  send {blind}{h}
+return
+
+;====================== End ======================
+$*n::
+if GetKeyState("Capslock", "P")
+  send {blind}{End}
+else
+  send {blind}{n}
+return
+
+;====================== Insert ======================
+$*;::
+if GetKeyState("Capslock", "P")
+  send {blind}{Insert}
+else
+  send {blind}{;}
+return
