@@ -1,5 +1,5 @@
 ﻿;========= Author: Sengngy Kouch 
-;========= Version: Vanilla Version 1.0            
+;========= Version: WCSU Version 1.0            
 ;========= license: MIT License   
                              
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
