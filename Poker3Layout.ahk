@@ -1,5 +1,5 @@
 ﻿;========= Author: Sengngy Kouch 
-;========= Version: Vanilla Version 1.0            
+;========= Version: Photoshop Version 1.0            
 ;========= license: MIT License   
                              
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
@@ -64,14 +64,6 @@ if GetKeyState("Capslock", "P")
   send {blind}{delete}
 else
   send {blind}{'}
-return
-
-;====================== Backspace ======================
-$*Space::
-if GetKeyState("Capslock", "P")
-  send {blind}{Backspace}
-else
-  send {blind}{space}
 return
 
 ;====================== Pageup ======================
