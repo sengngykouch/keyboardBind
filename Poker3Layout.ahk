@@ -11,6 +11,22 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #MaxHotkeysPerInterval 20000  ;//allow amount of key press in 1 sec.
 SetCapsLockState, AlwaysOff
 
+;======================= Press F1 for staging ==========================
+$F1::
+{
+	Send ^{l}{left}{left}+{right 4}^{c}{left 4}
+	var:=clipboard
+	if(var = "www.")
+	{
+		sendinput staging.{enter}
+	}
+	else if (var = "wcsu")
+	{
+		sendinput staging.www.{enter}
+	}
+return
+}
+
 ;====================== Copy and Paste with ( Alt + L or R click) ====================
 Alt & LButton:: send ^{c} return
 Alt & RButton:: send ^{v} return
