@@ -1,19 +1,21 @@
-﻿;======================= By Sengngy Kouch. @ Spring 2017 ==========================
-
+﻿;========= Author: Sengngy Kouch 
+;========= Version: Vanilla Version 1.0            
+;========= license: MIT License   
+                             
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-#MaxHotkeysPerInterval 20000  ;//allow amount of key press in 1 sec.
 
+#MaxHotkeysPerInterval 20000  ;//allow amount of key press in 1 sec.
+SetCapsLockState, AlwaysOff
 
 ;====================== Copy and Paste with ( Alt + L or R click) ====================
 Alt & LButton:: send ^{c} return
 Alt & RButton:: send ^{v} return
 
 
-SetCapsLockState, AlwaysOff
 ;====================== CapsLock On/Off ======================
 CapsLock & Enter::
   state := GetKeyState("Capslock", "T")
@@ -22,6 +24,7 @@ CapsLock & Enter::
   else
     SetCapsLockState, AlwaysOn
 return
+
 
 ;====================== Up Arrow ======================
 $*i::
