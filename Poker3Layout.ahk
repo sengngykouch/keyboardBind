@@ -69,7 +69,7 @@ return
 ;====================== Backspace ======================
 $*Space::
 if GetKeyState("Capslock", "P")
-  send {blind}{Backspace}
+  send ^{Backspace}
 else
   send {blind}{space}
 return
