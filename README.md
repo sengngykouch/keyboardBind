@@ -20,7 +20,7 @@
 1. Keyboard Hotkeys:  
   - Hold down the *Capslock* (Blue color) + *another Key* (Green color).  
     - Eg: `Hold down *Capslock* and Press *j* will trigger *Left-Arrow*.`
-    - Eg: `Hold down *Capslock* and Press *space* will trigger *BackSpace*.`
+    - Eg: `Hold down *Capslock* and Press *space* will trigger *Ctrl + BackSpace*.` (Michael Recommendation)
     - Eg: `Hold down *Capslock* and Press *u* will trigger *PageUp*.`
     
 2. To Activate Capslock. Hold down *Capslock* and Press *Enter* (Red color). 
