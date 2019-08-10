@@ -111,11 +111,11 @@ else
 return
 
 ;====================== Insert ======================
-$*;::
-if GetKeyState("Capslock", "P")
-  send {blind}{Insert}
-else
-  send {blind}{;}
-return
+;$*;::
+;if GetKeyState("Capslock", "P")
+;  send {blind}{Insert}
+;else
+;  send {blind}{;}
+;return
 
 return ; End of Suspending the script here.
