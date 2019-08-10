@@ -11,6 +11,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #MaxHotkeysPerInterval 20000  ;//allow amount of key press in 1 sec.
 SetCapsLockState, AlwaysOff
 
+; ================== Suspend the whole script ============================
+!F7:: Suspend
+
+
 ;====================== Copy and Paste with ( Alt + L or R click) ====================
 Alt & LButton:: send ^{c} ;
 Alt & RButton:: send ^{v} ;
@@ -113,3 +117,5 @@ if GetKeyState("Capslock", "P")
 else
   send {blind}{;}
 return
+
+return ; End of Suspending the script here.

@@ -17,15 +17,18 @@
 ## Usage
 ![alt text](https://github.com/sengngykouch/keyboardBind/blob/master/vortex-poker3-62uk_zpskowcfdjx.jpg "Key binds")  
 
-1. Keyboard Hotkeys:  
+1. Toggle the script on/off:
+  - Hold *Alt* then press *F7*.
+
+2. Keyboard Hotkeys:  
   - Hold down the *Capslock* (Blue color) + *another Key* (Green color).  
     - Eg: `Hold down *Capslock* and Press *j* will trigger *Left-Arrow*.`
     - Eg: `Hold down *Capslock* and Press *space* will trigger *Ctrl + BackSpace*.` (Michael Recommendation)
     - Eg: `Hold down *Capslock* and Press *u* will trigger *PageUp*.`
     
-2. To Activate Capslock. Hold down *Capslock* and Press *Enter* (Red color). 
+3. To Activate Capslock. Hold down *Capslock* and Press *Enter* (Red color). 
 
-3. Copy and Paste with Mouse:
+4. Copy and Paste with Mouse:
   - Hold Down *Alt* (Pink color), then press Left or Right Click.
     - Eg: `Hold Down *Alt* and *Left-Click* will Copy the select content.`
 
