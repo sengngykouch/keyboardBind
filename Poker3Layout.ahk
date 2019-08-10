@@ -12,8 +12,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetCapsLockState, AlwaysOff
 
 ;====================== Copy and Paste with ( Alt + L or R click) ====================
-Alt & LButton:: send ^{c} return
-Alt & RButton:: send ^{v} return
+Alt & LButton:: send ^{c} ;
+Alt & RButton:: send ^{v} ;
 
 
 ;====================== CapsLock On/Off ======================
