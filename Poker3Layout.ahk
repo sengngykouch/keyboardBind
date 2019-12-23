@@ -70,14 +70,6 @@ else
   send {blind}{'}
 return
 
-;====================== Backspace ======================
-$*Space::
-if GetKeyState("Capslock", "P")
-  send ^{Backspace}
-else
-  send {blind}{space}
-return
-
 ;====================== Pageup ======================
 $*u::
 if GetKeyState("Capslock", "P")
