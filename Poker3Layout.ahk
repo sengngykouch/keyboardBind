@@ -14,12 +14,6 @@ SetCapsLockState, AlwaysOff
 ; ================== Suspend the whole script ============================
 !F7:: Suspend
 
-
-;====================== Copy and Paste with ( Alt + L or R click) ====================
-Alt & LButton:: send ^{c} ;
-Alt & RButton:: send ^{v} ;
-
-
 ;====================== CapsLock On/Off ======================
 CapsLock & Enter::
   state := GetKeyState("Capslock", "T")
