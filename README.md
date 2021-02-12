@@ -6,7 +6,8 @@
 - This layout works by using CapsLock as the modifier key, and then we bind it with other keys to trigger many most used keys such as Arrow keys, Delete, Backspace, etc.  
 
 ## System Requirements
-- Windows Windows 7, 8, 8.1, 10 Only. We don't support MacOS at the moment. 
+- Windows Windows 7, 8, 8.1, 10 Only.
+- MacOS version can be found [here](https://github.com/sengngykouch/KeyboardBind-Mac).
 
 ## Installation
 - Download the "Poker3Layout.exe" file.
